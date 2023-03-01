@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { Layout } from "@/components";
 import "@/styles/globals.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Lato } from "@next/font/google";
@@ -11,7 +13,9 @@ const lato = Lato({
 export default function App({ Component, pageProps }) {
   return (
     <main className={lato.className}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </main>
   );
 }
