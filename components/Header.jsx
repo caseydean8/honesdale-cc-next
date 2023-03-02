@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 // import { getCategories } from "../services";
 import Hamburger from "./Hamburger";
-// import styles from "../styles/Navbar.module.css"
 
 const Header = () => {
   // const [categories, setCategories] = useState([]);
