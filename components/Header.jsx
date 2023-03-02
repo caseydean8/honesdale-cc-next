@@ -3,16 +3,28 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 // import { getCategories } from "../services";
 import Hamburger from "./Hamburger";
+// import styles from "../styles/Navbar.module.css"
 
 const Header = () => {
   // const [categories, setCategories] = useState([]);
-  const [transition, setTransition] = useState("0px");
+  const desktop = typeof window !== "undefined" && window.innerWidth <= 767.98;
+  const [isDesktop, setDesktop] = useState(desktop);
 
-  const router = useRouter();
-
-  const handleClick = (e) => {
-    transition === "0px" ? setTransition("119px") : setTransition("0px");
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 768);
   };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+  // const [transition, setTransition] = useState("0px");
+
+  // const router = useRouter();
+
+  // const handleClick = (e) => {
+  //   transition === "0px" ? setTransition("119px") : setTransition("0px");
+  // };
 
   // useEffect(() => {
   //   getCategories().then((newCategories) => setCategories(newCategories));
@@ -20,57 +32,117 @@ const Header = () => {
 
   const menu = [
     { title: "home", path: "/" },
-    { title: "about", path: "/about" },
+    { title: "our beliefs", path: "/our-beliefs" },
+    { title: "serve", path: "/serve" },
+    { title: "videos", path: "/videos" },
+    { title: "events", path: "/events" },
+    { title: "gallery", path: "/gallery" },
     { title: "contact", path: "/contact" },
-    { title: "articles", path: "/articles" },
   ];
 
+  // const urls = [
+  //   ["/", "home"],
+  //   ["/our beliefs", "our beliefs"],
+  //   ["/serve", "serve"],
+  //   ["/videos", "videos"],
+  //   ["/events", "events"],
+  //   ["/gallery", "gallery"],
+  //   ["/contact", "contact"],
+  // ];
+
+  // let routes = [];
+
   return (
-    <div className="border-b grid grid-cols-7 justify-items-stretch border-teal pt-7 pb-5 md:pb-6 max-w-5xl mx-auto">
-      <div className="col-span-6 md:col-span-3">
-        <Link href="/">
-          <span className="cursor-pointer text-4xl">Casey Carroll</span>
-        </Link>
-      </div>
-      <div className="hidden md:float-left md:contents">
-        {menu.map((item) => (
-          <Link key={item.title} href={item.path}>
-            <span
-              className={`md:float-right mt-2 align-middle justify-self-end ml-4 cursor-pointer ${
-                router.pathname === item.path ? "text-teal" : "text-gray-500"
-              }`}
+    <nav className="navbar navbar-expand-md fixed-top navbar-light">
+      <div className="container g-0">
+        <div className="row g-0">
+          <div className="col-10">
+            <h2>HONESDALE COMMUNITY CHURCH</h2>
+          </div>
+          <div className="col-2">
+            <button
+              className="navbar-toggler collapsed ms-2 mt-1"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-              {item.title}
-            </span>
-          </Link>
-        ))}
-      </div>
-      {/* Mobile Menu */}
-      <Hamburger onClick={handleClick} />
-      <div
-        className="expand col-start-3 col-span-3
-           justify-self-center md:hidden pt-2"
-        style={{ height: transition }}
-      >
-        <ul className="text-center text-lg">
-          {menu.map((item) => {
-            return (
-              <Link key={item.title} href={item.path}>
-                <li
-                  className={`cursor-pointer ${
-                    router.pathname === item.path
-                      ? "text-teal"
-                      : "text-gray-500"
-                  }`}
-                >
-                  {item.title}
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul className="navbar-nav ml-auto">
+            {menu.map((item) =>
+              isDesktop ? (
+                <li key={item.title} className="nav-item">
+                  <Link href={item.path} className="nav-link">
+                    {item.title}
+                  </Link>
                 </li>
-              </Link>
-            );
-          })}
-        </ul>
+              ) : (
+                <li
+                  key={item.title}
+                  className="nav-item"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                >
+                  <Link href={item.path} className="nav-link">
+                    {item.title}
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
+        </div>
+        {/* <div className="hidden md:float-left md:contents"> */}
+        {/*   {menu.map((item) => ( */}
+        {/*     <Link key={item.title} href={item.path}> */}
+        {/*       <span */}
+        {/*         className={`md:float-right mt-2 align-middle justify-self-end ml-4 cursor-pointer ${ */}
+        {/*           router.pathname === item.path ? "text-teal" : "text-gray-500" */}
+        {/*         }`} */}
+        {/*       > */}
+        {/*         {item.title} */}
+        {/*       </span> */}
+        {/*     </Link> */}
+        {/*   ))} */}
+        {/* </div> */}
+        {/* Mobile Menu */}
+        {/* <Hamburger onClick={handleClick} /> */}
+        {/* <div */}
+        {/*   className="expand col-start-3 col-span-3 */}
+        {/*    justify-self-center md:hidden pt-2" */}
+        {/*   style={{ height: transition }} */}
+        {/* > */}
+        {/*   <ul className="text-center text-lg"> */}
+        {/*     {menu.map((item) => { */}
+        {/*       return ( */}
+        {/*         <Link key={item.title} href={item.path}> */}
+        {/*           <li */}
+        {/*             className={`cursor-pointer ${ */}
+        {/*               router.pathname === item.path */}
+        {/*                 ? "text-teal" */}
+        {/*                 : "text-gray-500" */}
+        {/*             }`} */}
+        {/*           > */}
+        {/*             {item.title} */}
+        {/*           </li> */}
+        {/*         </Link> */}
+        {/*       ); */}
+        {/*     })} */}
+        {/*   </ul> */}
+        {/* </div> */}
       </div>
-    </div>
+    </nav>
   );
 };
 
