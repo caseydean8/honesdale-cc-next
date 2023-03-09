@@ -32,10 +32,8 @@ const Header = () => {
   const menu = [
     { title: "home", path: "/" },
     { title: "our beliefs", path: "/our-beliefs" },
-    { title: "serve", path: "/serve" },
     { title: "videos", path: "/videos" },
     { title: "events", path: "/events" },
-    { title: "gallery", path: "/gallery" },
     { title: "contact", path: "/contact" },
   ];
 
@@ -54,25 +52,28 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-md fixed-top navbar-light">
       <div className="container g-0">
-        <div className="row g-0">
-          <div className="col-10">
-            <h2>HONESDALE COMMUNITY CHURCH</h2>
-          </div>
-          <div className="col-2">
-            <button
-              className="navbar-toggler collapsed ms-2 mt-1"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
+        {/* <div className="d-flex justify-content-center"> */}
+        <div className="nav-title mx-auto">
+          {/* <div className=""> */}
+          <h2>
+            HONESDALE <br/> COMMUNITY CHURCH
+          </h2>
+        </div>
+        {/* </div> */}
+        <div className="hamburger z-3 position-absolute top-0 end-0 mt-2">
+          <button
+            className="navbar-toggler collapsed ms-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
 
         <div

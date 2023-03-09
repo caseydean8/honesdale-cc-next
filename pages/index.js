@@ -11,19 +11,17 @@ export default function Home({ posts }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container mx-auto">
-        <div>
-          <div className="row">
-            {posts.map((post) => (
-              <PostCard post={post.node} key={post.title} />
+      <div className="index-js container-sm mx-auto text-center">
+          {/* <div className="row"> */}
+            {posts.map((post, index) => (
+              <PostCard post={post.node} key={index} />
             ))}
             {/* see video at 30:35 for setup divs*/}
-          </div>
-        </div>
+          {/* </div> */}
         <div className="lg:col-span-4 col-span-1">
           <div className="lg-sticky relative top-8">
-            <PostWidget />
-            <Categories />
+            {/* <PostWidget /> */}
+            {/* <Categories /> */}
           </div>
         </div>
       </div>

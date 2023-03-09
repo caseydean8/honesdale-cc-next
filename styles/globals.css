@@ -1,10 +1,20 @@
 /* check positioning */
- * {
+* {
   box-sizing: border-box;
-  outline: 1px solid limegreen !important;
-  background: rgb(0 100 0 / 0.1) !important;
+  /* outline: 1px solid limegreen !important; */
+  /* background: rgb(0 100 0 / 0.1) !important; */
 }
 
+.nav-title {
+  /* margin-left: -30px; */
+  /* padding-left: 30px; */
+  /* max-width: 18rem; */
+}
+
+.hamburger {
+  /* margin-left: -20px; */
+  /* outline: 1px solid limegreen !important; */
+}
 /* change to lato */
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap'); */
 
@@ -86,4 +96,13 @@ nav a.nav-link {
   #cdc {
     padding-left: 0.75rem;
   }
+}
+
+.index-js {
+  padding-top: 6.5rem;
+}
+
+.calendar-svg {
+  width: 1.3rem;
+  color: red;
 }
