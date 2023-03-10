@@ -30,17 +30,16 @@ body {
   padding: 1rem 0.625rem;
   background-color: white;
   opacity: 0.99;
-  font-family: "Lato", sans-serif;
   text-align: center;
-  font-weight: 100;
+  font-weight: 300;
 }
 
-h2 {
+h2,p {
   font-weight: 300;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 /* nav links */
 nav a.nav-link {
