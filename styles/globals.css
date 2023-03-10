@@ -5,6 +5,10 @@
   /* background: rgb(0 100 0 / 0.1) !important; */
 }
 
+.home {
+  margin-top: 7rem;
+  text-align: center;
+}
 .nav-title {
   /* margin-left: -30px; */
   /* padding-left: 30px; */
@@ -14,11 +18,7 @@
 .hamburger {
   margin-top: 2vh;
   margin-right: 1.5vh;
-  /* margin-left: -20px; */
-  /* outline: 1px solid limegreen !important; */
 }
-/* change to lato */
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap'); */
 
 html,
 body {
@@ -34,7 +34,9 @@ body {
   font-weight: 300;
 }
 
-h2,p {
+h2,
+h4,
+p {
   font-weight: 300;
 }
 
