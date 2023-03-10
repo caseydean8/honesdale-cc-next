@@ -12,6 +12,8 @@
 }
 
 .hamburger {
+  margin-top: 2vh;
+  margin-right: 1.5vh;
   /* margin-left: -20px; */
   /* outline: 1px solid limegreen !important; */
 }
@@ -35,6 +37,10 @@ body {
 
 h2 {
   font-weight: 300;
+}
+
+a {
+    text-decoration: none;
 }
 /* nav links */
 nav a.nav-link {
@@ -105,4 +111,10 @@ nav a.nav-link {
 .calendar-svg {
   width: 1.3rem;
   color: red;
+}
+
+/* collapsible list */
+.expand {
+  overflow: hidden;
+  transition: height 0.5s;
 }

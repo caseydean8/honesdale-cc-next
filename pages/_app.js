@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Layout } from "@/components";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
 import "@/styles/globals.css";
 import { Lato } from "next/font/google";
 
