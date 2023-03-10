@@ -36,10 +36,27 @@ const Header = () => {
     { title: "contact", path: "/contact" },
   ];
 
+  const menuMap = menu.map((item) => {
+    return (
+      <Link key={item.title} href={item.path}>
+        <li
+          className={`nav-link ${
+            router.pathname === item.path ? "text-info" : "text-dark"
+          }`}
+        >
+          {item.title}
+        </li>
+      </Link>
+    );
+  });
+
   return (
     <nav className="navbar navbar-expand-md fixed-top navbar-light">
       <div className="container g-0">
-        <div className="nav-title mx-auto">
+        <div className="d-none d-sm-block mx-auto">
+          <h2>HONESDALE COMMUNITY CHURCH</h2>
+        </div>
+        <div className="d-block d-sm-none mx-auto">
           <h2>
             HONESDALE <br /> COMMUNITY CHURCH
           </h2>
@@ -56,42 +73,16 @@ const Header = () => {
           </button>
         </div>
 
-        <div className="d-none d-sm-block">
-          large menu
-          {menu.map((item) => (
-            <Link key={item.title} href={item.path}>
-              <span
-                className={`md:float-right mt-2 align-middle justify-self-end ml-4 cursor-pointer ${
-                  router.pathname === item.path ? "text-teal" : "text-gray-500"
-                }`}
-              >
-                {item.title}
-              </span>
-            </Link>
-          ))}
+        <div className="d-none d-sm-block mx-auto">
+          <ul className="nav">{menuMap}</ul>
         </div>
 
         {/* Mobile Menu */}
-        {/* <Hamburger onClick={handleClick} /> */}
         <div
-          className="d-block d-sm-none expand collapse navbar-collapse justify-content-end"
+          className="d-block d-sm-none expand collapse navbar-collapse"
           style={{ height: transition }}
         >
-          <ul className="navbar-nav ml-auto">
-            {menu.map((item) => {
-              return (
-                <Link key={item.title} href={item.path}>
-                  <li
-                    className={`nav-link ${
-                      router.pathname === item.path ? "text-info" : ""
-                    }`}
-                  >
-                    {item.title}
-                  </li>
-                </Link>
-              );
-            })}
-          </ul>
+          <ul className="navbar-nav">{menuMap}</ul>
         </div>
       </div>
     </nav>

@@ -40,6 +40,19 @@ export default function Home() {
             <h3>1113 Church Street</h3>
             <h3>Honesdale, PA 18472</h3>
           </div>
+          <div class="handicap mt-4">
+            <Image
+              src="Wice_Wheelchair.svg"
+              alt="wheelchair icon"
+              width={40}
+              height={40}
+            />
+            <p>
+              We are committed to being accessible to all. Please contact us so
+              we can make any arrangements necessary for you to attend our
+              services and events. [Insert  Email/phone]
+            </p>
+          </div>
         </div>
         <WazeMap />
       </div>

@@ -9,11 +9,6 @@
   margin-top: 7rem;
   text-align: center;
 }
-.nav-title {
-  /* margin-left: -30px; */
-  /* padding-left: 30px; */
-  /* max-width: 18rem; */
-}
 
 .hamburger {
   margin-top: 2vh;
@@ -27,7 +22,7 @@ body {
 }
 
 .navbar {
-  padding: 1rem 0.625rem;
+  padding: 1rem 0.625rem 0.375rem 0.625rem;
   background-color: white;
   opacity: 0.99;
   text-align: center;
