@@ -40,7 +40,7 @@ export default function Home() {
             <h3>1113 Church Street</h3>
             <h3>Honesdale, PA 18472</h3>
           </div>
-          <div class="handicap mt-4">
+          <div className="handicap mt-4">
             <Image
               src="Wice_Wheelchair.svg"
               alt="wheelchair icon"

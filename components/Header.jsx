@@ -51,16 +51,23 @@ const Header = () => {
   });
 
   return (
-    <nav className="navbar navbar-expand-md fixed-top navbar-light">
-      <div className="container g-0">
+    <nav className="navbar fixed-top navbar-light">
+      <div className="container">
         <div className="d-none d-sm-block mx-auto">
           <h2>HONESDALE COMMUNITY CHURCH</h2>
         </div>
+
+        <div className="d-none d-sm-block mx-auto">
+          <ul className="nav">{menuMap}</ul>
+        </div>
+
+        {/* Mobile Menu */}
         <div className="d-block d-sm-none mx-auto">
           <h2>
             HONESDALE <br /> COMMUNITY CHURCH
           </h2>
         </div>
+
         <div className="hamburger z-3 position-absolute top-0 end-0 d-sm-none">
           <button
             className={`navbar-toggler ${collapsed} ms-2`}
@@ -73,11 +80,6 @@ const Header = () => {
           </button>
         </div>
 
-        <div className="d-none d-sm-block mx-auto">
-          <ul className="nav">{menuMap}</ul>
-        </div>
-
-        {/* Mobile Menu */}
         <div
           className="d-block d-sm-none expand collapse navbar-collapse"
           style={{ height: transition }}

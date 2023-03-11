@@ -5,6 +5,25 @@
   /* background: rgb(0 100 0 / 0.1) !important; */
 }
 
+.footer {
+  max-height: 110px;
+  width: 100%;
+  /* outline: 1px solid limegreen !important; */
+
+  /* border-top: 2px solid rgb(12 44 150/ 1); */
+  background: rgb(254 254 254/ 1) !important;
+}
+
+.footer-image {
+  max-height: 110px;
+  /* border-right: 2px solid rgb(12 44 150/ 1); */
+  /* border-left: 2px solid rgb(12 44 150/ 1); */
+  /* width: auto; */
+}
+.max {
+  max-width: 766px;
+}
+
 .home {
   margin-top: 7rem;
   text-align: center;

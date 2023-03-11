@@ -37,3 +37,27 @@ export const getPosts = async () => {
 
   return result.postsConnection.edges;
 };
+
+export const getPostsBasic = async () => {
+  const query = gql`
+    query MyQuery {
+      postsConnection {
+        edges {
+          node {
+            featuredImage {
+              url
+            }
+            title
+            content {
+              text
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.postsConnection.edges;
+};
