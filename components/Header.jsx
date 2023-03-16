@@ -37,8 +37,6 @@ const Header = () => {
     { title: "new here?", path: "/new-here" },
   ];
 
-    console.log(menu)
-
   const menuMap = menu.map((item) => {
     return (
       <Link key={item.title} href={item.path}>
