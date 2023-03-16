@@ -18,3 +18,12 @@ export async function getStaticProps() {
     props: { posts },
   };
 }
+
+// export async function getStaticPaths() {
+//   // const categories = await getCategories();
+//   return {
+//     // paths: categories.map(({ slug }) => ({ params: { slug } })),
+//     paths: [],
+//     fallback: true,
+//   };
+// }

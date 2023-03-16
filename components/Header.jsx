@@ -22,7 +22,7 @@ const Header = () => {
   const [collapsed, setCollapsed] = useState("collapsed");
 
   const handleClick = (e) => {
-    transition === "0px" ? setTransition("200px") : setTransition("0px");
+    transition === "0px" ? setTransition("232px") : setTransition("0px");
     collapsed == "collapsed" ? setCollapsed("") : setCollapsed("collapsed");
   };
 
@@ -34,7 +34,10 @@ const Header = () => {
     { title: "videos", path: "/videos" },
     { title: "events", path: "/events" },
     { title: "contact", path: "/contact" },
+    { title: "new here?", path: "/new-here" },
   ];
+
+    console.log(menu)
 
   const menuMap = menu.map((item) => {
     return (

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import SevenHandsLogo from "../public/seven-hands-crop.webp";
 import { WazeMap } from "@/components";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,8 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container-fluid p-0">
-        <div className="container home mb-5 px-4">
-          <div className="clopper"></div>
+        <div className="container navbar-clearance px-4">
           <Image
             src={SevenHandsLogo}
             alt="seven hands around the cross"
@@ -23,7 +23,11 @@ export default function Home() {
             priority
           />
           <h1>Sunday Worship Service 9:30am</h1>
-          <button className="btn btn-info mb-2">New Here?</button>
+          <button className="btn btn-info mb-2">
+            <Link href="/new-here" id="new-here-link">
+              New Here?
+            </Link>
+          </button>
           <h3 className="pb-2">We saved a seat for you!</h3>
           <h4>
             We hope you will see we are not your ordinary traditional church. We
