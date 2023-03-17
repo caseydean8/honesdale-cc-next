@@ -1,10 +1,16 @@
 import React from "react";
 import Image from "next/image";
+import OverShoulderScriptures from "public/over-shoulder-scriptures.webp";
 
 const OurBeliefs = () => {
   return (
     <div className="new-here navbar-clearance container">
-      {/* <Image /> */}
+      <Image
+        src={OverShoulderScriptures}
+        alt="seven hands around the cross"
+        className="img-fluid rounded"
+        priority
+      />
       <div class="card my-1">
         <div class="card-body">
           <div class="card-title">About the Scriptures</div>
