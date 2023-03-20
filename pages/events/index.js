@@ -4,7 +4,7 @@ import { getPostsBasic } from "@/services";
 
 export default function Events({ posts }) {
   return (
-    <div className="index-js container-sm mx-auto text-center">
+    <div className="event-page-marker">
       {posts.map((post, index) => (
         <PostCard post={post.node} key={index} />
       ))}
@@ -18,12 +18,3 @@ export async function getStaticProps() {
     props: { posts },
   };
 }
-
-// export async function getStaticPaths() {
-//   // const categories = await getCategories();
-//   return {
-//     // paths: categories.map(({ slug }) => ({ params: { slug } })),
-//     paths: [],
-//     fallback: true,
-//   };
-// }

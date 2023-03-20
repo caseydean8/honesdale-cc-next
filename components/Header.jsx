@@ -44,6 +44,7 @@ const Header = () => {
           className={`nav-link ${
             router.pathname === item.path ? "text-info" : "text-dark"
           }`}
+          onClick={handleClick}
         >
           {item.title}
         </li>
