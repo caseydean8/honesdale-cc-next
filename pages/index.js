@@ -23,7 +23,7 @@ export default function Home() {
         />
         <h1>Sunday Worship Service 9:30am</h1>
         <button className="btn btn-info mb-2">
-          <Link href="/new-here" id="new-here-link">
+          <Link href="/new-here" className="black-link">
             New Here?
           </Link>
         </button>
