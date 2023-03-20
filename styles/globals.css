@@ -4,6 +4,7 @@
   /* outline: 1px solid limegreen !important; */
   /* background: rgb(0 100 0 / 0.1) !important; */
 }
+
 .waze-map {
   /* margin-right: -1rem; */
   /* margin-left: -1rem; */
@@ -20,24 +21,20 @@
 .navbar-clearance {
   margin-top: 7rem;
   text-align: center;
-  /* margin-bottom: 14rem; */
+  min-height: calc(64vh - 110px);
+  /* outline: 1px solid limegreen !important; */
 }
 
 .footer {
   max-height: 110px;
   width: 100%;
-  /* outline: 1px solid limegreen !important; */
-  /* border-top: 2px solid rgb(12 4 150/ 1); */
-  background: rgb(254 254 254/ 1) !important;
   margin-top: 14rem;
 }
 
 .footer-image {
   max-height: 110px;
-  /* border-right: 2px solid rgb(12 44 150/ 1); */
-  /* border-left: 2px solid rgb(12 44 150/ 1); */
-  /* width: auto; */
 }
+
 .max {
   max-width: 766px;
 }
