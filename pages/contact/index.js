@@ -12,6 +12,7 @@ class ContactForm extends React.Component {
     };
   }
 
+
   handleValidation() {
     let fields = this.state.fields;
     let errors = {};
@@ -67,10 +68,10 @@ class ContactForm extends React.Component {
 
     emailjs
       .send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         templateParams,
-        process.env.REACT_APP_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -84,7 +85,7 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className="contact-page-marker">
+      <div className="contact page-marker">
         {this.state.submitted ? (
           <>
             <h1 className="contact-header contact">Thanks!</h1>

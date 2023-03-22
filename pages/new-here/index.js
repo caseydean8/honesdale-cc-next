@@ -2,7 +2,7 @@ import React from "react";
 
 const NewHere = () => {
   return (
-    <div className="new-here-page-marker">
+    <div className="new-here page-marker">
       <h1>New Here? What to Expect</h1>
       <div className="card my-1">
         <div className="card-body">
