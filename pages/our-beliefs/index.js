@@ -4,7 +4,7 @@ import ReadingScriptures from "public/over-shoulder-scriptures.webp";
 
 const OurBeliefs = () => {
   return (
-    <div className="new-here">
+    <div className="our-beliefs page-marker">
       <Image
         src={ReadingScriptures}
         alt="reading scriptures"

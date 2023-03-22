@@ -5,9 +5,16 @@
   /* background: rgb(0 100 0 / 0.1) !important; */
 }
 
+.page-marker {
+  max-width: 576px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .waze-map {
-  /* margin-right: -1rem; */
-  /* margin-left: -1rem; */
+  max-width: 576px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .image-fluid {
   /* fix next Image component warning */
@@ -29,14 +36,12 @@
   max-height: 110px;
   width: 100%;
   margin-top: 14rem;
+  background-color: #11caf0;
 }
 
 .footer-image {
   max-height: 110px;
-}
-
-.max {
-  max-width: 766px;
+  /* max-width: 576px; */
 }
 
 .hamburger {
@@ -48,6 +53,11 @@ html,
 body {
   padding: 0;
   margin: 0;
+  /* background-color: #11caf0; */
+}
+
+.layout {
+  background-color: white;
 }
 
 .navbar {
@@ -123,17 +133,6 @@ nav a.nav-link {
 }
 .navbar-toggler span:nth-child(3) {
   transform: translate(0%, 0%) rotate(0deg);
-}
-
-@media screen and (max-width: 576px) {
-  #cdc {
-    padding-left: 0.75rem;
-  }
-}
-
-.calendar-svg {
-  width: 1.3rem;
-  color: red;
 }
 
 /* collapsible list */
