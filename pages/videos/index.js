@@ -1,18 +1,41 @@
 import React from "react";
-import styles from '@/styles/Video.module.css'
+import styles from "@/styles/Video.module.css";
 
 const Videos = () => {
   return (
-    <div className={styles.iframeContainer}>
-      <iframe
-        width="100%"
-        height="250"
-        src="https://www.youtube-nocookie.com/embed/videoseries?list=PL2jfjxYwstKOshW7hsNgRf0D7EICiGQEl&modestbranding=1"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-        className="rounded"
-      ></iframe>
+    <div className="video-page-marker">
+      <h2>Recent Messages</h2>
+      <div className={styles.outerContainer}>
+        <div className={styles.iframeContainer}>
+          <iframe
+            // in channel id you must change UC2KX... to UU2KX...
+            src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UU2KX862afQKX4qc6ryGKQVA&rel=0&index=1"
+            title="YouTube video player"
+            allowFullScreen
+            className="rounded"
+          ></iframe>
+        </div>
+      </div>
+      <div className={styles.outerContainer}>
+        <div className={styles.iframeContainer}>
+          <iframe
+            src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UU2KX862afQKX4qc6ryGKQVA&rel=0&index=2"
+            title="YouTube video player"
+            allowFullScreen
+            className="rounded"
+          ></iframe>
+        </div>
+      </div>
+      <div className={styles.outerContainer}>
+        <div className={styles.iframeContainer}>
+          <iframe
+            src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UU2KX862afQKX4qc6ryGKQVA&rel=0&index=3"
+            title="YouTube video player"
+            allowFullScreen
+            className="rounded"
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 };
