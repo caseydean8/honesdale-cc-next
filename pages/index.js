@@ -58,7 +58,14 @@ export default function Home() {
         </div>
       </div>
       <WazeMap />
-      <div className="matthew-18-20 p-3">
+      <div className="matthew-18-20 p-3 row">
+        {/* <div className="col-sm-4"> */}
+        {/*   <p> */}
+        {/*     For where two or three have gathered together in My name, I am there */}
+        {/*     in their midst.<br></br> */}
+        {/*     Matthew 18:20 */}
+        {/*   </p> */}
+        {/* </div> */}
         <p>
           For where two or three have gathered together in My name, I am there
           in their midst.<br></br>

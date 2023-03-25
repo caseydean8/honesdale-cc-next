@@ -12,7 +12,6 @@ class ContactForm extends React.Component {
     };
   }
 
-
   handleValidation() {
     let fields = this.state.fields;
     let errors = {};
