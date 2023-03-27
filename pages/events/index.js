@@ -4,7 +4,7 @@ import { getPostsBasic } from "@/services";
 
 export default function Events({ posts }) {
   return (
-    <div className="event-page-marker">
+    <div className="event page-marker">
       {posts.map((post, index) => (
         <PostCard post={post.node} key={index} />
       ))}
