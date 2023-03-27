@@ -22,8 +22,6 @@ const Header = () => {
   const [collapsed, setCollapsed] = useState("collapsed");
 
   const handleClick = () => {
-    // is this necessary?
-    // e.preventDefault();
     transition === "0px" ? setTransition("232px") : setTransition("0px");
     collapsed == "collapsed" ? setCollapsed("") : setCollapsed("collapsed");
   };
@@ -77,6 +75,7 @@ const Header = () => {
             className={`navbar-toggler ${collapsed} ms-2`}
             type="button"
             onClick={handleClick}
+            aria-label="Collapsible Menu Button"
           >
             <span></span>
             <span></span>
