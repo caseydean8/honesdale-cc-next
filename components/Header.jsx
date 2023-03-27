@@ -21,9 +21,9 @@ const Header = () => {
   const [transition, setTransition] = useState("0px");
   const [collapsed, setCollapsed] = useState("collapsed");
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     // is this necessary?
-    e.preventDefault();
+    // e.preventDefault();
     transition === "0px" ? setTransition("232px") : setTransition("0px");
     collapsed == "collapsed" ? setCollapsed("") : setCollapsed("collapsed");
   };

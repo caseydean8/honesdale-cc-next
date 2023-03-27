@@ -5,8 +5,9 @@
   /* background: rgb(0 100 0 / 0.1) !important; */
 }
 /* footer  */
-.footer-links a {
+.footer-links  {
     color: black;
+    font-weight: 300;
 }
 
 .social-icons li {

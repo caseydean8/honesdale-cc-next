@@ -27,17 +27,26 @@ const Footer = () => {
             <div className="col-md-8 text-md-right">
               <ul className="social-icons">
                 <li>
-                  <Link href="https://www.facebook.com/HonesdaleCommunityChurch" className="fb">
+                  <Link
+                    href="https://www.facebook.com/HonesdaleCommunityChurch"
+                    className="fb"
+                  >
                     <FaFacebookSquare />
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.youtube.com/channel/UC2KX862afQKX4qc6ryGKQVA" className="tw">
+                  <Link
+                    href="https://www.youtube.com/channel/UC2KX862afQKX4qc6ryGKQVA"
+                    className="tw"
+                  >
                     <FaYoutube style={{ color: "#FF0000" }} />
                   </Link>
                 </li>
                 <li>
-                  <Link href="mailto:honesdalecc@honesdalecc.org" className="in">
+                  <Link
+                    href="mailto:honesdalecc@honesdalecc.org"
+                    className="in"
+                  >
                     <IoMailOutline />
                   </Link>
                 </li>
@@ -57,25 +66,30 @@ const Footer = () => {
             {/* </div> */}
             <div className="col-md-6 text-center text-md-right">
               <ul className="nav-links nav-right">
-                <li className="footer-links">
-                  {/* <a href="#">home</a> */}
-                  <Link href="/">home</Link>
+                <li>
+                  <Link href="/" className="footer-links">
+                    home
+                  </Link>
                 </li>
-                <li className="footer-links">
-                  {/* <a href="#">our beliefs</a> */}
-                  <Link href="/our-beliefs">our beliefs</Link>
+                <li>
+                  <Link href="/our-beliefs" className="footer-links">
+                    our beliefs
+                  </Link>
                 </li>
-                <li className="footer-links">
-                  {/* <a href="#">videos</a> */}
-                  <Link href="/videos">videos</Link>
+                <li>
+                  <Link href="/videos" className="footer-links">
+                    videos
+                  </Link>
                 </li>
-                <li className="footer-links">
-                  {/* <a href="#">events</a> */}
-                  <Link href="/events">events</Link>
+                <li>
+                  <Link href="/events" className="footer-links">
+                    events
+                  </Link>
                 </li>
-                <li className="footer-links">
-                  {/* <a href="#">contact</a> */}
-                  <Link href="contact">contact</Link>
+                <li>
+                  <Link href="contact" className="footer-links">
+                    contact
+                  </Link>
                 </li>
               </ul>
             </div>
