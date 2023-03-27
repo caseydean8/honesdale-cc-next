@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <footer className="pt-4">
-        <div className="container">
+        <div className="container-fluid px-4">
           <div className="row text-center">
             <ul className="social-icons">
               <li>
@@ -71,7 +71,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div class="copyright text-center">
+            <div className="copyright text-center">
               <p>
                 <small>Copyright 2023. All Rights Reserved.</small>
               </p>

@@ -84,7 +84,7 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <div className="contact page-marker pb-5">
+      <div className="contact page-marker">
         {this.state.submitted ? (
           <>
             <h1 className="contact-header contact">Thanks!</h1>
