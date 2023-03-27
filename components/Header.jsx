@@ -37,21 +37,36 @@ const Header = () => {
     { title: "new here?", path: "/new-here" },
   ];
 
+  // const menuMap = menu.map((item) => {
+  //   return (
+  //     <Link key={item.title} href={item.path}>
+  //       <li
+  //         className={`nav-link ${
+  //           router.pathname === item.path ? "text-info" : "text-dark"
+  //         }`}
+  //         onClick={handleClick}
+  //       >
+  //         {item.title}
+  //       </li>
+  //     </Link>
+  //   );
+  // });
+
   const menuMap = menu.map((item) => {
     return (
-      <Link key={item.title} href={item.path}>
-        <li
+      <li key={item.title}>
+        <Link
           className={`nav-link ${
             router.pathname === item.path ? "text-info" : "text-dark"
           }`}
+          href={item.path}
           onClick={handleClick}
         >
           {item.title}
-        </li>
-      </Link>
+        </Link>
+      </li>
     );
   });
-
   return (
     <nav className="navbar fixed-top navbar-light">
       <div className="container">
