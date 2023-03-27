@@ -15,7 +15,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="https://www.facebook.com/HonesdaleCommunityChurch"
-                  className="fb"
+                  aria-label="facebook page"
                 >
                   <FaFacebookSquare />
                 </Link>
@@ -23,13 +23,16 @@ const Footer = () => {
               <li>
                 <Link
                   href="https://www.youtube.com/channel/UC2KX862afQKX4qc6ryGKQVA"
-                  className="tw"
+                  aria-label="YouTube channel"
                 >
                   <FaYoutube style={{ color: "#FF0000" }} />
                 </Link>
               </li>
               <li>
-                <Link href="mailto:honesdalecc@honesdalecc.org" className="in">
+                <Link
+                  href="mailto:honesdalecc@honesdalecc.org"
+                  aria-label="send email"
+                >
                   <IoMailOutline />
                 </Link>
               </li>
