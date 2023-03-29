@@ -6,6 +6,7 @@ const NewHere = () => {
     <>
       <Head>
         <title>New Here?</title>
+        <meta name="description" content="Discover when and where our Sunday service is, our casual dress policy, and what is available for children." />
       </Head>
       <div className="new-here page-marker">
         <h2>New Here?</h2>

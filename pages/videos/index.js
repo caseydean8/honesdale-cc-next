@@ -23,6 +23,7 @@ const Videos = () => {
     <>
       <Head>
         <title>Videos</title>
+        <meta name="description" content="Watch videos of our most recent services as well as other content." />
       </Head>
       <div className="video-page-marker">
         <h2>Recent Messages</h2>

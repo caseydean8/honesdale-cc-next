@@ -95,6 +95,7 @@ class ContactForm extends React.Component {
           <>
             <Head>
               <title>Contact</title>
+              <meta name="description" content="Contact us by filling out a form with your name, email, and a brief message or reach out to us by phone and we will get back to you asap" />
             </Head>
             <h2 className="contact-header">Have A Question?</h2>
             <h4>Leave us a message and we'll get back to you soon</h4>

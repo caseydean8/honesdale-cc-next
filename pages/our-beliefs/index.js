@@ -8,6 +8,7 @@ const OurBeliefs = () => {
     <>
       <Head>
         <title>Our Beliefs</title>
+        <meta name="description" content="Read about our spiritual beliefs about the scriptures, God, humanity, eternal salvation, christian life, and Christ's church" />
       </Head>
       <div className="our-beliefs page-marker">
         <h2>Our Beliefs</h2>

@@ -9,6 +9,7 @@ export default function Home() {
     <>
       <Head>
         <title>Home</title>
+        <meta name="description" content="Homepage for Honesdale Community Church with service hours, address and map." />
       </Head>
       <div className="page-marker">
         <div className="px-4">
