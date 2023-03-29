@@ -5,7 +5,26 @@
   /* background: rgb(0 100 0 / 0.1) !important; */
 }
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.card {
+  box-shadow: 0px 5px 5px 0px #00000024;
+}
+
 /* footer  */
+.footer {
+  border-top: 2px solid rgb(17, 202, 240);
+  background-color: rgb(17, 202, 240, 0.25);
+}
+
 .footer-links {
   color: black;
   font-weight: 300;
@@ -33,6 +52,7 @@
   margin-right: auto;
   margin-left: auto;
 }
+
 .image-fluid {
   /* fix next Image component warning */
   width: auto;
@@ -43,31 +63,15 @@
 }
 
 .navbar-clearance {
-  margin-top: 7rem;
+  margin-top: 6rem;
   text-align: center;
   min-height: calc(64vh - 110px);
   padding-bottom: 5rem;
 }
 
-.footer {
-  border-top: 2px solid rgb(17, 202, 240);
-  background-color: rgb(17, 202, 240, 0.25);
-}
-
-.footer-image {
-  max-height: 110px;
-  /* max-width: 576px; */
-}
-
 .hamburger {
   margin-top: 2vh;
   margin-right: 1.5vh;
-}
-
-html,
-body {
-  padding: 0;
-  margin: 0;
 }
 
 .navbar {
@@ -81,7 +85,8 @@ body {
 h2,
 h4,
 p,
-.card-text {
+.card-text,
+.home-page-text {
   font-weight: 300;
 }
 
