@@ -25,14 +25,9 @@ const PostCard = ({ post }) => {
   };
 
   return (
-    <div className="PostCard card mb-2">
+    <div className="card mb-2">
       {/* must use image here so poster doesn't have to worry about width/height */}
       {eventImage()}
-      {/* <img */}
-      {/*   src={post.featuredImage.url} */}
-      {/*   alt="featured image" */}
-      {/*   className="card-img-top" */}
-      {/* /> */}
       <div className="card-body">
         <h5 className="card-title">{post.title}</h5>
         <p className="card-text">{post.content.text}</p>

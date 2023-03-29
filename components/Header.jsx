@@ -1,23 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-// import { getCategories } from "../services";
-import Hamburger from "./Hamburger";
 
 const Header = () => {
-  // const [categories, setCategories] = useState([]);
-  const desktop = typeof window !== "undefined" && window.innerWidth <= 767.98;
-  const [isDesktop, setDesktop] = useState(desktop);
-
-  const updateMedia = () => {
-    setDesktop(window.innerWidth > 768);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
-
   const [transition, setTransition] = useState("0px");
   const [collapsed, setCollapsed] = useState("collapsed");
 
@@ -37,21 +22,6 @@ const Header = () => {
     { title: "new here?", path: "/new-here" },
   ];
 
-  // const menuMap = menu.map((item) => {
-  //   return (
-  //     <Link key={item.title} href={item.path}>
-  //       <li
-  //         className={`nav-link ${
-  //           router.pathname === item.path ? "text-info" : "text-dark"
-  //         }`}
-  //         onClick={handleClick}
-  //       >
-  //         {item.title}
-  //       </li>
-  //     </Link>
-  //   );
-  // });
-
   const menuMap = menu.map((item) => {
     return (
       <li key={item.title}>
@@ -67,6 +37,7 @@ const Header = () => {
       </li>
     );
   });
+
   return (
     <nav className="navbar fixed-top navbar-light">
       <div className="container">
