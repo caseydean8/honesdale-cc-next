@@ -40,6 +40,36 @@ export const getPosts = async () => {
   return result.postsConnection.edges;
 };
 
+export const getArticles = async () => {
+  const query = gql`
+    query MyQuery {
+      articlesConnection {
+        edges {
+          node {
+            author {
+              id
+            }
+            excerpt
+            createdAt
+            content {
+              text
+            }
+            slug
+            title
+            featuredImage {
+              url
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.articlesConnection.edges;
+};
+
 export const getPostsBasic = async () => {
   const query = gql`
     query MyQuery {
@@ -108,7 +138,6 @@ export const getRecentPosts = async () => {
 
 //   return result.posts;
 // };
-
 
 export const getPostDetails = async (slug) => {
   const query = gql`
