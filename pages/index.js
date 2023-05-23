@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import SevenHandsLogo from "../public/seven-hands-crop.webp";
-import { WazeMap } from "@/components";
+import { WazeMap } from "../components";
 import Link from "next/link";
 
 export default function Home() {
