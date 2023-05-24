@@ -30,7 +30,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="mailto:honesdalecc@honesdalecc.org"
+                  href="mailto:honesdalecc@gmail.com"
                   aria-label="send email"
                 >
                   <IoMailOutline />
