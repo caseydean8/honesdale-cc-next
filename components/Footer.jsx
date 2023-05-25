@@ -1,7 +1,5 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import FooterLogo from "../public/hcc-new-logo_3.webp";
 import { FaFacebookSquare, FaYoutube } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 
