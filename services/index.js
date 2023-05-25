@@ -52,7 +52,7 @@ export const getArticles = async () => {
             excerpt
             createdAt
             content {
-              text
+              raw
             }
             slug
             title
@@ -81,7 +81,8 @@ export const getPostsBasic = async () => {
             }
             title
             content {
-              text
+              # raw content must be formatted in PostCard.jsx
+              raw
             }
           }
         }
