@@ -6,7 +6,7 @@ const Videos = () => {
   const recentVids = [];
   for (let index = 1; index <= 3; index++) {
     recentVids.push(
-      <div className={styles.outerContainer}>
+      <div className={styles.outerContainer} key={index}>
         <div className={styles.iframeContainer}>
           <iframe
             // in channel id you must change UC2KX... to UU2KX...
