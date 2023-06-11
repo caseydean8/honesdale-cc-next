@@ -6,15 +6,9 @@ const Videos = () => {
   const recentVids = [];
   for (let index = 1; index <= 3; index++) {
     recentVids.push(
-      <div className={styles.outerContainer} key={index}>
-        <div className={styles.iframeContainer}>
-          <iframe
-            // in channel id you must change UC2KX... to UU2KX...
-            src={`https://www.youtube-nocookie.com/embed?listType=playlist&list=UU2KX862afQKX4qc6ryGKQVA&rel=0&index=${index}`}
-            title="YouTube video player"
-            allowFullScreen
-            className="rounded"
-          ></iframe>
+      <div className="placeholder-glow">
+        <div className={`placeholder ${styles.outerContainer}`} key={index}>
+          <div className={styles.iframeContainer}></div>
         </div>
       </div>
     );
