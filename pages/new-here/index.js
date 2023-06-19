@@ -1,12 +1,16 @@
 import React from "react";
 import Head from "next/head";
+import Balancer from "react-wrap-balancer";
 
 const NewHere = () => {
   return (
     <>
       <Head>
         <title>New Here?</title>
-        <meta name="description" content="Discover when and where our Sunday service is, our casual dress policy, and what is available for children." />
+        <meta
+          name="description"
+          content="Discover when and where our Sunday service is, our casual dress policy, and what is available for children."
+        />
       </Head>
       <div className="new-here page-marker">
         <h2>New Here?</h2>
@@ -14,7 +18,9 @@ const NewHere = () => {
         <div className="card my-2">
           <div className="card-body">
             <div className="card-title">
-              WHEN & WHERE is Honesdale Community Church Service?
+              <Balancer>
+                WHEN & WHERE is the Honesdale Community Church Service?
+              </Balancer>
             </div>
             <div className="card-text mb-2">
               Our Sunday service is at 9:30 am. We also meet for coffee

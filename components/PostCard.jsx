@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Balancer from "react-wrap-balancer";
 
 const PostCard = ({ post }) => {
   const eventImage = () => {
@@ -77,8 +78,9 @@ const PostCard = ({ post }) => {
     <div className="card mb-2">
       {eventImage()}
       <div className="card-body">
-        <h5 className="card-title">{post.title}</h5>
-        <p className="card-text">{post.content.text}</p>
+        <h5 className="card-title">
+          <Balancer>{post.title}</Balancer>
+        </h5>
         {post.content.raw.children.map((typeObj, index) => {
           const children = typeObj.children.map((item, itemIndex) =>
             getContentFragment(itemIndex, item.text, item)

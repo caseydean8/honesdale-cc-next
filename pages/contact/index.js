@@ -1,6 +1,7 @@
 import React from "react";
 import * as emailjs from "@emailjs/browser";
 import Head from "next/head";
+import Balancer from "react-wrap-balancer";
 // https://www.emailjs.com/docs/examples/reactjs/
 
 class ContactForm extends React.Component {
@@ -101,7 +102,12 @@ class ContactForm extends React.Component {
               />
             </Head>
             <h2 className="contact-header">Have A Question?</h2>
-            <h4>Leave us a message and we'll get back to you soon</h4>
+            <h4>
+              <Balancer>
+                Leave us a message and we'll get back to you soon
+              </Balancer>
+            </h4>
+
             <form onSubmit={this.handleSubmit.bind(this)}>
               <div className="mb-3">
                 <input
