@@ -23,23 +23,21 @@ const NewHere = () => {
               </Balancer>
             </div>
             <div className="card-text mb-2">
-              Our Sunday service is at 9:30 am. We also meet for coffee
-              beforehand at 9:00 am.
+              Our Sunday service is at 9:30 am. We meet for coffee beforehand at
+              9:00 am.
             </div>
-            <div className="card-subtitle text-muted">Our address is</div>
-            <div className="card-text">113 Church Street</div>
-            <div className="card-text">Honesdale, PA 18431</div>
+            <div>Our address is</div>
+            <div>1113 Church Street</div>
+            <div>Honesdale, PA 18431</div>
           </div>
         </div>
         <div className="card my-2">
           <div className="card-body">
             <div className="card-title">HOW LONG IS THE WORSHIP SERVICE?</div>
             <div className="card-text">
-              Our worship service last about an hour.
-            </div>
-            <div className="card-text">
-              Afterwards you're invited to stay for our Coffee Connection and
-              enjoy fellowship, snacks and refreshments.
+              Our worship service lasts about an hour. Afterwards you're invited
+              to stay for our Coffee Connection and enjoy fellowship, snacks and
+              refreshments.
             </div>
           </div>
         </div>
@@ -58,7 +56,7 @@ const NewHere = () => {
             <div className="card-title">WHAT IS AVAILABLE FOR KIDS? </div>
             <div className="card-text mb-1">
               Honesdale Community Church has a program for children ages 5-11.
-              It is a safe and engaging environment, where parents can feel free
+              It is a safe and engaging environment where parents can feel free
               to leave their children during the church service. Our mission is
               to share the gospel with with children in an age appropriate
               manner while their parents participate in adult worship service.

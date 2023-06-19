@@ -1,6 +1,6 @@
-/* check positioning */
 * {
   box-sizing: border-box;
+  /* check positioning */
   /* outline: 1px solid limegreen !important; */
   /* background: rgb(0 100 0 / 0.1) !important; */
 }
@@ -156,4 +156,10 @@ nav a.nav-link {
 .expand {
   overflow: hidden;
   transition: height 0.5s;
+}
+
+@media (min-width:801px) {
+  .card-text {
+    text-align: left;
+  }
 }
