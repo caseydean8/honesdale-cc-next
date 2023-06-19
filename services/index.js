@@ -1,7 +1,5 @@
-// GraphQLClient should replace graphQLClient in query  functions
 import { request, gql, GraphQLClient } from "graphql-request";
 
-// const graphQLClient = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 const graphQLClient = new GraphQLClient(
   process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
 );
@@ -74,7 +72,7 @@ export const getArticles = async () => {
 export const getPostsBasic = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection {
+      postsConnection(orderBy: updatedAt_DESC) {
         edges {
           node {
             featuredImage {
@@ -91,7 +89,6 @@ export const getPostsBasic = async () => {
     }
   `;
 
-  // const result = await request(graphQLClient, query);
   const result = await graphQLClient.request(query);
   return result.postsConnection.edges;
 };
@@ -145,6 +142,5 @@ export const getPostDetails = async (slug) => {
     }
   `;
   const result = await graphQLClient.request(query, { slug });
-  // const result = await request(graphQLClient, query, { slug });
   return result.post;
 };
