@@ -1,6 +1,6 @@
-import { Layout } from "@/components";
+import { Layout } from "../components";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
-import "@/styles/globals.css";
+import "../styles/globals.css";
 // import "@/styles/design_tokens.css";
 import { Lato } from "next/font/google";
 

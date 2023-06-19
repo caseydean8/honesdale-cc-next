@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import { PostCard } from "@/components";
-import { getArticles } from "@/services";
+import { PostCard } from "../../components";
+import { getArticles } from "../../services";
 
 export default function Events({ articles }) {
   return (
