@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import ReadingScriptures from 'public/over-shoulder-scriptures.webp';
-import Card from '../../components/Card';
+import Card from 'components/Card';
 
 const OurBeliefs = () => {
   return (
