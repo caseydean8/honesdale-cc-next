@@ -1,1 +1,2 @@
 run locally: npm run dev
+"target": "es5" might not be necessary in tsconfig
