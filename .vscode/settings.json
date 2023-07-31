@@ -1,3 +1,9 @@
 {
-  "vscode.tsc.compiler.alertTSConfigChanges": "never"
+  "vscode.tsc.compiler.alertTSConfigChanges": "never",
+  "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
