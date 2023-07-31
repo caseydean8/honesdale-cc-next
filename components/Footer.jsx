@@ -39,7 +39,6 @@ const Footer = () => {
           <div className="row pb-5">
             <div className="col-md-5 text-center">
               <div className="site-logo">
-                {/* <a href="#">Honesdale Community Church</a> */}
                 <h3>honesdale community church</h3>
               </div>
             </div>
