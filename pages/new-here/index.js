@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Balancer from 'react-wrap-balancer';
 import Card from 'components/Card';
+import Video from 'components/Video';
 
 const NewHere = () => {
   return (
@@ -15,20 +16,15 @@ const NewHere = () => {
       </Head>
       <div className='new-here page-marker'>
         <h2>New Here?</h2>
-        <h2>What to Expect</h2>
-        <div className='card my-2'>
-          <div className='card-body'>
-            <div className='card-title'>
-              <Balancer>WHEN & WHERE is the Honesdale Community Church Service?</Balancer>
-            </div>
-            <div className='card-text mb-2'>
-              Our Sunday service is at 9:30 am. We meet for coffee beforehand at 9:00 am.
-            </div>
-            <div>Our address is</div>
-            <div>1113 Church Street</div>
-            <div>Honesdale, PA 18431</div>
-          </div>
-        </div>
+        <h4>What to Expect</h4>
+        <Card
+          title={<Balancer>WHEN & WHERE is the Honesdale Community Church Service?</Balancer>}
+          text='Our Sunday service is at 9:30 am. We meet for coffee beforehand at 9:00 am.'
+        >
+          <div>Our address is</div>
+          <div>1113 Church Street</div>
+          <div>Honesdale, PA 18431</div>
+        </Card>
         <Card
           title='HOW LONG IS THE WORSHIP SERVICE?'
           text="Our worship service lasts about an hour. Afterwards you're invited to stay for
@@ -48,12 +44,10 @@ const NewHere = () => {
           text='You fill in the blank with any fear you might have about not being accepted. You
               belong here. So please come as you are, and we will see you on Sunday!'
         />
-        <div className='card my-2'>
-          <div className='card-body'>
-            <div className='card-title'>WHAT IS A CHRISTIAN</div>
-            <div className='card-text mb-2'>Watch our ongoing series on youtube.</div>
-          </div>
-        </div>
+        <Card title='WHAT IS A CHRISTIAN?'>
+          <div className='card-text mb-2 text-center'>Watch our ongoing series.</div>
+          <Video src={'https://www.youtube-nocookie.com/embed/ENgmOZvaFMs'}></Video>
+        </Card>
       </div>
     </>
   );

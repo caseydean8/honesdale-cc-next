@@ -1,6 +1,7 @@
 interface Card {
   title: String;
   text: String;
+  children: React.ReactNode;
 }
 
 const Card = (card: Card) => {
@@ -9,6 +10,7 @@ const Card = (card: Card) => {
       <div className='card-body'>
         <div className='card-title'>{card.title}</div>
         <div className='card-text'>{card.text}</div>
+        {card.children}
       </div>
     </div>
   );
