@@ -1,8 +1,8 @@
 import React from 'react';
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import TextInput from '@/components/TextInput';
-import TextArea from '@/components/Textarea';
+import TextArea from '@/components/TextArea';
 
 const SignupForm = () => {
   const phoneRegExp =
