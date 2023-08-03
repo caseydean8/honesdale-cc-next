@@ -7,8 +7,9 @@ const TextArea = ({ ...props }) => {
   const [field, meta] = useField(props.name);
 
   return (
-    <div className='mb-3'>
+    <div className='form-floating mb-3'>
       <textarea className='form-control' {...field} {...props}></textarea>
+      <label htmlFor={props.id || props.name}>{props.placeholder}</label>
       {meta.touched && meta.error ? <div className='error-msg'>{meta.error}</div> : null}
     </div>
   );
