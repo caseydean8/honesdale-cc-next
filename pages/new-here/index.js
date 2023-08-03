@@ -45,8 +45,16 @@ const NewHere = () => {
               belong here. So please come as you are, and we will see you on Sunday!'
         />
         <Card title='WHAT IS A CHRISTIAN?'>
-          <div className='card-text mb-2 text-center'>Watch our ongoing series.</div>
-          <Video src={'https://www.youtube-nocookie.com/embed/ENgmOZvaFMs'}></Video>
+          <div className='card-text mb-2 text-center'>
+            {/* <a href='https://youtube.com/playlist?list=PL2jfjxYwstKMFknJNTZS7GGWwcG48ht3z'> */}
+            Watch our ongoing series.
+            {/* </a> */}
+          </div>
+          <Video
+            src={
+              'https://www.youtube-nocookie.com/embed/videoseries?list=PL2jfjxYwstKMFknJNTZS7GGWwcG48ht3z&rel=0&index=1'
+            }
+          ></Video>
         </Card>
       </div>
     </>
