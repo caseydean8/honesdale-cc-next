@@ -4,6 +4,8 @@ import * as Yup from 'yup';
 import TextInput from '@/components/TextInput';
 import TextArea from '@/components/TextArea';
 import * as emailjs from '@emailjs/browser';
+import Checkbox from '@/components/Checkbox';
+import SelectInput from '@/components/SelectInput';
 
 interface Values {
   firstName: string;
@@ -78,11 +80,18 @@ const SignupForm = () => {
           onSubmit={values => handleFormSubmit(values)}
         >
           {({ isValid, isSubmitting, dirty }) => (
-            <Form>
+            <Form className='row g-2'>
               <TextInput name='firstName' type='text' placeholder='First Name' />
               <TextInput name='lastName' type='text' placeholder='Last Name' />
               <TextInput name='email' type='text' placeholder='Email' />
               <TextInput name='phone' type='text' placeholder='Phone' />
+              <SelectInput name='select' label='do you attend?' defaultValue={'default'}>
+                <option value='default'>please select</option>
+                <option value='yes'>yes</option>
+                <option value='planning to'>I'm planning to</option>
+                <option value='no'>no</option>
+              </SelectInput>
+              <Checkbox name='cell-check'>you can text me at this number</Checkbox>
               <TextArea name='message' placeholder='Message' />
               <div className='d-grid d-sm-block'>
                 {loading ? (

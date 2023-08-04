@@ -25,6 +25,10 @@ body {
   white-space: pre-wrap;
 }
 
+textarea {
+  min-height: 100px !important;
+}
+
 /* footer  */
 .footer {
   border-top: 2px solid rgb(17, 202, 240);

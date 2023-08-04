@@ -7,7 +7,7 @@ const TextInput = ({ ...props }) => {
   const [field, meta] = useField(props.name);
 
   return (
-    <div className='form-floating mb-3'>
+    <div className='form-floating col-md-6 mb-3'>
       <input className='form-control' {...field} {...props} />
       <label htmlFor={props.id || props.name}>{props.placeholder}</label>
       {meta.touched && meta.error ? <div className='error-msg'>{meta.error}</div> : null}

@@ -1,15 +1,16 @@
 import { useField } from 'formik';
 
-const SelectInput = ({ label, ...props }) => {
+const SelectInput = ({ children, label, ...props }) => {
   const [field, meta] = useField(props.name);
 
   return (
-    <div className='mb-3'>
-      <label htmlFor={props.id || props.name}>{label}</label>
+    <div className='form-floating col-md-6 mb-3'>
+      <select className='form-select' id='floatingSelect' {...field} {...props}>
+        {children}
+      </select>
 
-      <select className='form-control' {...field} {...props} />
-
-      {meta.touched && meta.error ? <div className='error-msg'>{meta.error}</div> : null}
+      <label htmlFor='floatingSelect'>{label}</label>
+      {/* {meta.touched && meta.error ? <div className='error-msg'>{meta.error}</div> : null} */}
     </div>
   );
 };
