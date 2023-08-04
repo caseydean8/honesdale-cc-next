@@ -15,7 +15,8 @@ interface Values {
 
 const SignupForm = () => {
   const [submitted, setSubmitted] = useState(false);
-  //   const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
@@ -28,6 +29,7 @@ const SignupForm = () => {
   });
 
   function handleFormSubmit(values: Values) {
+    setLoading(true);
     const { firstName, lastName, email, phone, message } = values;
 
     const templateParams = {
@@ -37,9 +39,6 @@ const SignupForm = () => {
       phone,
       message,
     };
-
-    // console.log(templateParams);
-    // setSubmitted(true);
 
     emailjs
       .send(
@@ -52,6 +51,7 @@ const SignupForm = () => {
         result => {
           console.log(result);
           setSubmitted(true);
+          setLoading(false);
         },
         error => console.log(error)
       );
@@ -85,13 +85,20 @@ const SignupForm = () => {
               <TextInput name='phone' type='text' placeholder='Phone' />
               <TextArea name='message' placeholder='Message' />
               <div className='d-grid d-sm-block'>
-                <button
-                  className='btn btn-info'
-                  type='submit'
-                  disabled={isSubmitting || !dirty || !isValid}
-                >
-                  submit
-                </button>
+                {loading ? (
+                  <button className='btn btn-info' type='button'>
+                    <span className='spinner-border spinner-border-sm' aria-hidden='true'></span>
+                    <span role='status'> sending . . .</span>
+                  </button>
+                ) : (
+                  <button
+                    className='btn btn-info'
+                    type='submit'
+                    disabled={isSubmitting || !dirty || !isValid}
+                  >
+                    submit
+                  </button>
+                )}
               </div>
             </Form>
           )}
