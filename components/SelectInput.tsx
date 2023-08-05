@@ -10,7 +10,7 @@ const SelectInput = ({ children, label, ...props }) => {
       </select>
 
       <label htmlFor='floatingSelect'>{label}</label>
-      {/* {meta.touched && meta.error ? <div className='error-msg'>{meta.error}</div> : null} */}
+      {meta.touched && meta.error ? <div className='error-msg'>{meta.error}</div> : null}
     </div>
   );
 };

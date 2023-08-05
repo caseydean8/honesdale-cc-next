@@ -6,12 +6,16 @@ import TextArea from '@/components/TextArea';
 import * as emailjs from '@emailjs/browser';
 import Checkbox from '@/components/Checkbox';
 import SelectInput from '@/components/SelectInput';
+import Head from 'next/head';
+import Balancer from 'react-wrap-balancer';
 
 interface Values {
   firstName: string;
   lastName: string;
   email: string;
   phone: string;
+  cellCheck: boolean;
+  attends: string;
   message: string;
 }
 
@@ -32,13 +36,15 @@ const SignupForm = () => {
 
   function handleFormSubmit(values: Values) {
     setLoading(true);
-    const { firstName, lastName, email, phone, message } = values;
+    const { firstName, lastName, email, phone, cellCheck, attends, message } = values;
 
     const templateParams = {
       firstName,
       lastName,
       email,
       phone,
+      cellCheck,
+      attends,
       message,
     };
 
@@ -74,47 +80,69 @@ const SignupForm = () => {
             lastName: '',
             email: '',
             phone: '',
+            cellCheck: false,
+            attends: '',
             message: '',
           }}
           validationSchema={validationSchema}
           onSubmit={values => handleFormSubmit(values)}
         >
           {({ isValid, isSubmitting, dirty }) => (
-            <Form className='row g-2'>
-              <TextInput name='firstName' type='text' placeholder='First Name' />
-              <TextInput name='lastName' type='text' placeholder='Last Name' />
-              <TextInput name='email' type='text' placeholder='Email' />
-              <TextInput name='phone' type='text' placeholder='Phone' />
-              <Checkbox name='cell-check' className='d-md-none'>
-                you can text me at this number
-              </Checkbox>
-              <SelectInput name='select' label='do you attend?' defaultValue={'default'}>
-                <option value='default'>please select</option>
-                <option value='yes'>yes</option>
-                <option value='planning to'>I'm planning to</option>
-                <option value='no'>no</option>
-              </SelectInput>
-              <Checkbox name='cell-check' className='d-none d-md-block'>
-                you can text me at this number
-              </Checkbox>
-              <TextArea name='message' placeholder='Message' />
-              <div className='d-grid d-sm-block'>
-                {loading ? (
-                  <button className='btn btn-info' type='button'>
-                    <span className='spinner-border spinner-border-sm' aria-hidden='true'></span>
-                    <span role='status'> sending . . .</span>
-                  </button>
-                ) : (
-                  <button
-                    className='btn btn-info'
-                    type='submit'
-                    disabled={isSubmitting || !dirty || !isValid}
-                  >
-                    submit
-                  </button>
-                )}
-              </div>
-            </Form>
+            <>
+              <Head>
+                <title>Contact</title>
+                <meta
+                  name='description'
+                  content='Contact us by filling out a form with your name, email, and a brief message or reach out to us by phone and we will get back to you asap'
+                />
+              </Head>
+              <h2 className='contact-header'>Have A Question?</h2>
+              <h4 className='pb-3'>
+                <Balancer>Leave us a message and we'll get back to you soon</Balancer>
+              </h4>
+              <Form className='row g-3'>
+                <TextInput name='firstName' type='text' placeholder='First Name' />
+                <TextInput name='lastName' type='text' placeholder='Last Name' />
+                <TextInput name='email' type='text' placeholder='Email' />
+                <TextInput name='phone' type='text' placeholder='Phone' />
+                <Checkbox name='cellCheck' className='d-md-none'>
+                  you can text me at this number
+                </Checkbox>
+                <SelectInput name='attends' label='do you attend?'>
+                  <option value='default'>please select</option>
+                  <option value='yes'>yes</option>
+                  <option value='planning to'>I'm planning to</option>
+                  <option value='no'>no</option>
+                </SelectInput>
+                <Checkbox name='cellCheck' className='d-none d-md-block'>
+                  you can text me at this number
+                </Checkbox>
+                <TextArea name='message' placeholder='Message' />
+                <div className='d-grid d-sm-block'>
+                  {loading ? (
+                    <button className='btn btn-info' type='button'>
+                      <span className='spinner-border spinner-border-sm' aria-hidden='true'></span>
+                      <span role='status'> sending . . .</span>
+                    </button>
+                  ) : (
+                    <button
+                      className='btn btn-info'
+                      type='submit'
+                      disabled={isSubmitting || !dirty || !isValid}
+                    >
+                      submit
+                    </button>
+                  )}
+                </div>
+              </Form>
+              <h4 className='mt-5'>. . . or feel free to call us</h4>
+
+              <button className='btn btn-info btn-lg mt-2'>
+                <a href='tel:5702533267' className='black-link'>
+                  570 253-3267
+                </a>
+              </button>
+            </>
           )}
         </Formik>
       )}

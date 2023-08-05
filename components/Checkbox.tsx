@@ -6,7 +6,6 @@ const Checkbox = ({ children, ...props }) => {
   // return the correct bag of props for you -- a `checked` prop will be included
   // in `field` alongside `name`, `value`, `onChange`, and `onBlur`
   const [field, meta] = useField(props.name);
-  console.log(field);
 
   return (
     <div className={`form-check col-md-6 mb-3 ${props.className}`}>
