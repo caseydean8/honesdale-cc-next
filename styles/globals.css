@@ -95,9 +95,15 @@ textarea {
 h2,
 h4,
 p,
+label,
 .card-text,
-.home-page-text {
+.home-page-text,
+.form-select {
   font-weight: 300;
+}
+
+.form-floating > label {
+  padding-left: 1.25rem;
 }
 
 a {
@@ -166,8 +172,12 @@ nav a.nav-link {
   transition: height 0.5s;
 }
 
-@media (min-width: 801px) {
-  .card-text {
+@media (min-width: 576px) {
+  .card-text,
+  .error-msg {
     text-align: left;
+  }
+  .navbar-clearance {
+    margin-top: 7.35rem;
   }
 }

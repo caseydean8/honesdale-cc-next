@@ -40,11 +40,15 @@ const SignupForm = () => {
   const phoneRegExp = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
 
   const validationSchema = Yup.object({
-    firstName: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
-    lastName: Yup.string().max(20, 'Must be 20 characters or less').required('Required'),
-    email: Yup.string().email('Invalid email address').required('Required'),
-    phone: Yup.string().matches(phoneRegExp, 'Phone number is not valid'),
-    message: Yup.string().required('Required'),
+    firstName: Yup.string()
+      .max(15, 'Must be 15 characters or less')
+      .required('Please enter a first name'),
+    lastName: Yup.string()
+      .max(20, 'Must be 20 characters or less')
+      .required('Please enter a last name'),
+    email: Yup.string().email('Please enter a valid email').required('Please enter an email'),
+    phone: Yup.string().matches(phoneRegExp, 'Please enter a valid phone number'),
+    message: Yup.string().required('Please enter a message'),
   });
 
   function handleFormSubmit(values: Values) {
