@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Formik } from 'formik';
+import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import TextInput from '@/components/TextInput';
 import TextArea from '@/components/TextArea';
@@ -23,8 +23,21 @@ const SignupForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const phoneRegExp =
-    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+  const CheckboxConditionalRender = (props: {
+    errors: string;
+    values: string;
+    className: string;
+  }) => {
+    if (!props.errors && props.values) {
+      return (
+        <Checkbox name='cellCheck' className={props.className}>
+          you can text me at this number
+        </Checkbox>
+      );
+    }
+  };
+
+  const phoneRegExp = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
 
   const validationSchema = Yup.object({
     firstName: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
@@ -48,6 +61,7 @@ const SignupForm = () => {
       message,
     };
 
+    // alert(JSON.stringify(values, null, 2));
     emailjs
       .send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -87,7 +101,7 @@ const SignupForm = () => {
           validationSchema={validationSchema}
           onSubmit={values => handleFormSubmit(values)}
         >
-          {({ isValid, isSubmitting, dirty }) => (
+          {({ isValid, isSubmitting, dirty, errors, touched, values }) => (
             <>
               <Head>
                 <title>Contact</title>
@@ -105,18 +119,22 @@ const SignupForm = () => {
                 <TextInput name='lastName' type='text' placeholder='Last Name' />
                 <TextInput name='email' type='text' placeholder='Email' />
                 <TextInput name='phone' type='text' placeholder='Phone' />
-                <Checkbox name='cellCheck' className='d-md-none'>
-                  you can text me at this number
-                </Checkbox>
-                <SelectInput name='attends' label='do you attend?'>
+                <CheckboxConditionalRender
+                  className='d-md-none'
+                  values={values.phone}
+                  errors={errors.phone}
+                />
+                <SelectInput name='attends' label='Do you attend?'>
                   <option value='default'>please select</option>
                   <option value='yes'>yes</option>
                   <option value='planning to'>I'm planning to</option>
                   <option value='no'>no</option>
                 </SelectInput>
-                <Checkbox name='cellCheck' className='d-none d-md-block'>
-                  you can text me at this number
-                </Checkbox>
+                <CheckboxConditionalRender
+                  className='d-none d-md-block'
+                  values={values.phone}
+                  errors={errors.phone}
+                />
                 <TextArea name='message' placeholder='Message' />
                 <div className='d-grid d-sm-block'>
                   {loading ? (
@@ -136,7 +154,6 @@ const SignupForm = () => {
                 </div>
               </Form>
               <h4 className='mt-5'>. . . or feel free to call us</h4>
-
               <button className='btn btn-info btn-lg mt-2'>
                 <a href='tel:5702533267' className='black-link'>
                   570 253-3267

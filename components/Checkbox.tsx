@@ -8,7 +8,7 @@ const Checkbox = ({ children, ...props }) => {
   const [field, meta] = useField(props.name);
 
   return (
-    <div className={`form-check col-md-6 mb-3 ${props.className}`}>
+    <div className={`form-check col-md-6 ${props.className}`}>
       <input className='form-check-input float-none' type='checkbox' {...field} />
       <label className='from-check-label text-start ps-2'>{children}</label>
       {meta.touched && meta.error ? <div className='error'>{meta.error}</div> : null}
