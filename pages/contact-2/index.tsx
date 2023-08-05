@@ -81,7 +81,7 @@ const SignupForm = () => {
             email: '',
             phone: '',
             cellCheck: false,
-            attends: '',
+            attends: 'unanswered',
             message: '',
           }}
           validationSchema={validationSchema}
