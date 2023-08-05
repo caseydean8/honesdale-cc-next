@@ -85,13 +85,18 @@ const SignupForm = () => {
               <TextInput name='lastName' type='text' placeholder='Last Name' />
               <TextInput name='email' type='text' placeholder='Email' />
               <TextInput name='phone' type='text' placeholder='Phone' />
+              <Checkbox name='cell-check' className='d-md-none'>
+                you can text me at this number
+              </Checkbox>
               <SelectInput name='select' label='do you attend?' defaultValue={'default'}>
                 <option value='default'>please select</option>
                 <option value='yes'>yes</option>
                 <option value='planning to'>I'm planning to</option>
                 <option value='no'>no</option>
               </SelectInput>
-              <Checkbox name='cell-check'>you can text me at this number</Checkbox>
+              <Checkbox name='cell-check' className='d-none d-md-block'>
+                you can text me at this number
+              </Checkbox>
               <TextArea name='message' placeholder='Message' />
               <div className='d-grid d-sm-block'>
                 {loading ? (

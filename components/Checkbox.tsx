@@ -6,10 +6,11 @@ const Checkbox = ({ children, ...props }) => {
   // return the correct bag of props for you -- a `checked` prop will be included
   // in `field` alongside `name`, `value`, `onChange`, and `onBlur`
   const [field, meta] = useField(props.name);
+  console.log(field);
 
   return (
-    <div className='form-check col-md-6 mb-3'>
-      <input className='form-check-input float-none' type='checkbox' {...field} {...props} />
+    <div className={`form-check col-md-6 mb-3 ${props.className}`}>
+      <input className='form-check-input float-none' type='checkbox' {...field} />
       <label className='from-check-label text-start ps-2'>{children}</label>
       {meta.touched && meta.error ? <div className='error'>{meta.error}</div> : null}
     </div>
