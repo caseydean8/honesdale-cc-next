@@ -22,7 +22,7 @@ const Videos = () => {
           content='Watch videos of our most recent services as well as other content.'
         />
       </Head>
-      <div className='video-page-marker'>
+      <div className='video page-marker'>
         <h2>Recent Messages</h2>
         {recentVids}
       </div>

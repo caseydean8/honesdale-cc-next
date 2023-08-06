@@ -1,10 +1,10 @@
-interface Card {
+interface CardValues {
   title: String;
   text: String;
   children: React.ReactNode;
 }
 
-const Card = (card: Card) => {
+const Card = (card: CardValues) => {
   return (
     <div className='card my-2'>
       <div className='card-body'>

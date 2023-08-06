@@ -1,22 +1,15 @@
 /* responsive iframe */
 .outerContainer {
-  max-width: 576px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1rem;
-  /* min-height: 56vw; */
-  border-radius: var(--bs-border-radius) !important;
-}
-
-.skeletonContainer {
-  max-width: 576px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1rem;
-  /* min-height: 56vw; */
-  border-radius: var(--bs-border-radius) !important;
+  /* animated background for loading */
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  border-radius: 5px;
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
 }
 
 .iframeContainer {
@@ -28,7 +21,6 @@
   border-radius: 0.375rem;
 }
 
-.react-loading-container,
 .iframeContainer iframe {
   border: 0;
   height: 100%;
@@ -41,5 +33,11 @@
 @media screen and (max-width: 768px) {
   .outerContainer {
     max-width: 514px;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
   }
 }
