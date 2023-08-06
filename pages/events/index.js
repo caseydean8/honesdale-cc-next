@@ -12,7 +12,7 @@ export default function Events({ posts }) {
       </Head>
       <div className='event page-marker'>
         <h2>Events</h2>
-        {posts ? (
+        {posts[0].node.featuredImage.url ? (
           posts.map((post, index) => <PostCard post={post.node} key={index} />)
         ) : (
           <>
@@ -26,8 +26,7 @@ export default function Events({ posts }) {
 }
 
 export async function getStaticProps() {
-  let posts = null;
-  posts = (await getPostsBasic()) || [];
+  const posts = (await getPostsBasic()) || [];
   return {
     props: { posts },
   };

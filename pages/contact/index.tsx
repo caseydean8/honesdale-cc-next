@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Field, Form, Formik } from 'formik';
+import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import TextInput from '@/components/TextInput';
 import TextArea from '@/components/TextArea';
@@ -66,6 +66,7 @@ const SignupForm = () => {
     };
 
     // alert(JSON.stringify(values, null, 2));
+
     emailjs
       .send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
