@@ -45,34 +45,34 @@ export const getPrayerList = async () => {
   return result.prayerRequestsConnection.edges[0].node.list.raw.children;
 };
 
-// export const getArticles = async () => {
-//   const query = gql`
-//     query MyQuery {
-//       articlesConnection {
-//         edges {
-//           node {
-//             author {
-//               id
-//             }
-//             excerpt
-//             createdAt
-//             content {
-//               raw
-//             }
-//             slug
-//             title
-//             featuredImage {
-//               url
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `;
+export const getArticles = async () => {
+  const query = gql`
+    query MyQuery {
+      articlesConnection {
+        edges {
+          node {
+            author {
+              id
+            }
+            excerpt
+            createdAt
+            content {
+              raw
+            }
+            slug
+            title
+            featuredImage {
+              url
+            }
+          }
+        }
+      }
+    }
+  `;
 
-//   const result = await graphQLClient.request(query);
-//   return result.articlesConnection.edges;
-// };
+  const result = await graphQLClient.request(query);
+  return result.articlesConnection.edges;
+};
 
 // export const getPosts = async () => {
 //   const query = gql`
