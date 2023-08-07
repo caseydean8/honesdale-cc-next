@@ -1,2 +1,3 @@
 run locally: npm run dev
 "target": "es5" might not be necessary in tsconfig
+change envs at Vercel and redeploy when adding forms etc.
