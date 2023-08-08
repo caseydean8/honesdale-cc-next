@@ -1,3 +1,19 @@
 run locally: npm run dev
 "target": "es5" might not be necessary in tsconfig
 change envs at Vercel and redeploy when adding forms etc.
+
+interface Content {
+  index: React.Key;
+  text: any;
+  obj: {
+    bold: boolean;
+    italic: boolean;
+    underline: boolean;
+    title: string;
+    height: string | number;
+    width: string | number;
+    src: string;
+  };
+  type?: string | undefined;
+}
+  const { index, text, obj, type } = content;

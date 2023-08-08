@@ -1,7 +1,21 @@
 import React from 'react';
 // Format raw text from Hygraph query
-const getContentFragment = (index, text, obj, type?) => {
+const getContentFragment = (
+  index: React.Key,
+  text: any,
+  obj: {
+    bold: any;
+    italic: any;
+    underline: any;
+    title: string;
+    height: string | number;
+    width: string | number;
+    src: string;
+  },
+  type?: string | undefined
+) => {
   let modifiedText = text;
+
   if (obj) {
     if (obj.bold) {
       modifiedText = <b key={index}> {text} </b>;
@@ -18,7 +32,7 @@ const getContentFragment = (index, text, obj, type?) => {
     case 'heading-three':
       return (
         <h3 key={index}>
-          {modifiedText.map((item, i) => (
+          {modifiedText.map((item: string, i: React.Key) => (
             <React.Fragment key={i}> {item} </React.Fragment>
           ))}
         </h3>
@@ -26,7 +40,7 @@ const getContentFragment = (index, text, obj, type?) => {
     case 'paragraph':
       return (
         <p key={index}>
-          {modifiedText.map((item, i) => (
+          {modifiedText.map((item: string, i: React.Key) => (
             <React.Fragment key={i}> {item} </React.Fragment>
           ))}
         </p>
@@ -34,7 +48,7 @@ const getContentFragment = (index, text, obj, type?) => {
     case 'heading-four':
       return (
         <h4 key={index}>
-          {modifiedText.map((item, i) => (
+          {modifiedText.map((item: string, i: React.Key) => (
             <React.Fragment key={i}> {item} </React.Fragment>
           ))}
         </h4>
