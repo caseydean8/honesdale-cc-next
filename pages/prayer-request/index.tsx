@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { getPrayerList } from '../../services';
 import getContentFragment from '@/components/GetContentFragment';
+import Link from 'next/link';
 
 export default function PrayerRequest({ prayerList }) {
   return (
@@ -17,6 +18,13 @@ export default function PrayerRequest({ prayerList }) {
           );
           return getContentFragment(index, children, typeObj, typeObj.type);
         })}
+        <div className='pt-3'>
+          <button className='btn btn-info'>
+            <Link className='black-link' href='/prayer-request-form'>
+              Add a Prayer Request
+            </Link>
+          </button>
+        </div>
       </div>
     </>
   );
