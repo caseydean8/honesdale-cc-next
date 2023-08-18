@@ -4,9 +4,9 @@ const getContentFragment = (
   index: React.Key,
   text: any,
   obj: {
-    bold: any;
-    italic: any;
-    underline: any;
+    bold: string;
+    italic: string;
+    underline: string;
     title: string;
     height: string | number;
     width: string | number;
