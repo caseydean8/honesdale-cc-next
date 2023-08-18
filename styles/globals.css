@@ -73,7 +73,7 @@ textarea {
 }
 
 .navbar-clearance {
-  margin-top: 6.75rem;
+  margin-top: 8.75rem;
   text-align: center;
   min-height: calc(64vh - 110px);
   padding-bottom: 5rem;
@@ -181,7 +181,18 @@ nav a.nav-link {
   .error-msg {
     text-align: left;
   }
+}
+
+@media screen and (max-width: 576px) {
+  /* Your CSS styles for screen widths up to 576px */
   .navbar-clearance {
     margin-top: 7.35rem;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 991px) {
+  /* Your CSS styles for this range of screen widths */
+  .navbar-clearance {
+    margin-top: 9.35rem;
   }
 }
