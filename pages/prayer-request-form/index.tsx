@@ -91,9 +91,7 @@ const PrayerRequestForm = () => {
                 <TextInput name='firstName' type='text' placeholder='First Name' />
                 <TextInput name='lastName' type='text' placeholder='Last Name' />
                 <TextInput name='email' type='text' placeholder='Email' />
-                <Checkbox name='anotherPerson'>
-                  this prayer request is for someone other than myself
-                </Checkbox>
+                <Checkbox name='anotherPerson'>this prayer request is for someone else</Checkbox>
                 <TextArea name='message' placeholder='Prayer Request:' />
                 <div className='d-grid d-sm-block'>
                   {loading ? (

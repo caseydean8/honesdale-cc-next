@@ -44,12 +44,12 @@ const Header = () => {
   return (
     <nav className='navbar fixed-top navbar-light'>
       <div className='container'>
-        <div className='d-none d-sm-block mx-auto'>
+        <div className='d-none d-sm-block px-1 mx-auto'>
           <h2>HONESDALE COMMUNITY CHURCH</h2>
         </div>
 
-        <div className='d-none d-sm-block mx-auto'>
-          <ul className='nav'>{menuMap}</ul>
+        <div className='d-none d-sm-flex mx-auto'>
+          <ul className='nav d-flex justify-content-evenly'>{menuMap}</ul>
         </div>
 
         {/* Mobile Menu */}
