@@ -16,8 +16,8 @@ export default function App({ Component, pageProps }) {
     <main className={lato.className}>
       <Layout>
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
-      <Analytics />
     </main>
   );
 }
