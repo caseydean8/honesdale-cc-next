@@ -13,6 +13,7 @@
     "@emailjs/browser": "^3.10.0",
     "@popperjs/core": "^2.11.6",
     "@testing-library/user-event": "^14.4.3",
+    "@vercel/analytics": "^1.0.2",
     "bootstrap": "^5.2.3",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.1",

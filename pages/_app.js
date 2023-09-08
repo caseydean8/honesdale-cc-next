@@ -1,13 +1,14 @@
-import { Layout } from "../components";
-import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
-import "../styles/globals.css";
+import { Layout } from '../components';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import bootstrap CSS
+import '../styles/globals.css';
 // import "@/styles/design_tokens.css";
-import { Lato } from "next/font/google";
+import { Lato } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
 const lato = Lato({
-  weight: ["100", "300", "400"],
-  style: ["normal"],
-  subsets: ["latin"],
+  weight: ['100', '300', '400'],
+  style: ['normal'],
+  subsets: ['latin'],
 });
 
 export default function App({ Component, pageProps }) {
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <Analytics />
     </main>
   );
 }
