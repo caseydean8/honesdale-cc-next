@@ -4,18 +4,18 @@ import Balancer from 'react-wrap-balancer';
 import Card from 'components/Card';
 import Video from 'components/Video';
 
-const NewHere = () => {
+const PlanYourVisit = () => {
   return (
     <>
       <Head>
-        <title>New Here?</title>
+        <title>Plan Your Visit</title>
         <meta
           name='description'
-          content='Discover when and where our Sunday service is, our casual dress policy, and what is available for children.'
+          content='Discover when and where the Honesdale Community Church Sunday service is, our casual dress policy, and what is available for children.'
         />
       </Head>
-      <div className='new-here page-marker'>
-        <h2>New Here?</h2>
+      <div className='plan-your-visit page-marker'>
+        <h2>Plan Your Visit</h2>
         <h4>What to Expect</h4>
         <Card
           title={<Balancer>WHEN & WHERE is the Honesdale Community Church Service?</Balancer>}
@@ -45,11 +45,7 @@ const NewHere = () => {
               belong here. So please come as you are, and we will see you on Sunday!'
         />
         <Card title='WHAT IS A CHRISTIAN?'>
-          <div className='card-text mb-2 text-center'>
-            {/* <a href='https://youtube.com/playlist?list=PL2jfjxYwstKMFknJNTZS7GGWwcG48ht3z'> */}
-            Watch our ongoing series.
-            {/* </a> */}
-          </div>
+          <div className='card-text mb-2 text-center'>Watch our ongoing series.</div>
           <Video
             src={
               'https://www.youtube-nocookie.com/embed/videoseries?list=PL2jfjxYwstKMFknJNTZS7GGWwcG48ht3z&rel=0&index=1'
@@ -61,4 +57,4 @@ const NewHere = () => {
   );
 };
 
-export default NewHere;
+export default PlanYourVisit;

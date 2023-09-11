@@ -26,8 +26,8 @@ export default function Home() {
           />
           <h1>Sunday Worship Service 9:30am</h1>
           <button className='btn btn-info mb-2'>
-            <Link href='/new-here' className='black-link'>
-              New Here?
+            <Link href='/plan-your-visit' className='black-link'>
+              plan your visit
             </Link>
           </button>
           <h3 className='pb-2'>We saved a seat for you!</h3>

@@ -20,7 +20,7 @@ const Header = () => {
     { title: 'events', path: '/events' },
     { title: 'prayer requests', path: '/prayer-request' },
     { title: 'contact', path: '/contact' },
-    { title: 'new here?', path: '/new-here' },
+    { title: 'plan your visit', path: '/plan-your-visit' },
   ];
 
   const menuMap = menu.map(item => {
