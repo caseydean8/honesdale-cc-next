@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaFacebookSquare, FaYoutube } from 'react-icons/fa';
+import { FaFacebookSquare, FaYoutube, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { IoMailOutline } from 'react-icons/io5';
 
 const Footer = () => {
@@ -24,6 +24,19 @@ const Footer = () => {
                   aria-label='YouTube channel'
                 >
                   <FaYoutube style={{ color: '#FF0000' }} />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='https://www.instagram.com/honesdalecommunitychurch/'
+                  aria-label='instagram'
+                >
+                  <FaInstagram />
+                </Link>
+              </li>
+              <li>
+                <Link href='https://twitter.com/HonesdaleChurch' aria-label='twitter'>
+                  <FaTwitter />
                 </Link>
               </li>
               <li>
