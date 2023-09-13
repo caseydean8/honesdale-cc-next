@@ -40,7 +40,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href='mailto:honesdalecc@gmail.com' aria-label='send email'>
+                <Link href='mailto:joinus@honesdalecc.org' aria-label='send email'>
                   <IoMailOutline />
                 </Link>
               </li>

@@ -17,7 +17,6 @@ const PlanYourVisit = () => {
       </Head>
       <div className='plan-your-visit page-marker'>
         <h2>Plan Your Visit</h2>
-        {/* <h4>What to Expect</h4> */}
         <div className='px-3'>
           <p>
             Our services last right around an hour and consist of worship through music followed by
@@ -48,7 +47,7 @@ const PlanYourVisit = () => {
         <Card title='Accessibility'>
           <div className='card-text'>
             We are committed to being accessible to all. Please contact{' '}
-            <Link href='mailto:honesdalecc@gmail.com' aria-label='send email'>
+            <Link href='mailto:joinus@honesdalecc.org' aria-label='send email'>
               JoinUs@HonesdaleCC.org
             </Link>{' '}
             so we can make any arrangements necessary for you to attend our services and events.
@@ -57,7 +56,7 @@ const PlanYourVisit = () => {
         <Card title='For more questions'>
           <div className='card-text'>
             If you have any specific questions, email us at{' '}
-            <Link href='mailto:honesdalecc@gmail.com' aria-label='send email'>
+            <Link href='mailto:joinus@honesdalecc.org' aria-label='send email'>
               JoinUs@HonesdaleCC.org
             </Link>{' '}
             and we hope to meet you this Sunday!
