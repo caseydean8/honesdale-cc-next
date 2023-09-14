@@ -31,7 +31,7 @@ export default function Home() {
             />
             <h2 className='pt-3 pb-2 fw-400'>
               <Balancer>
-                experience God in a real way while being part of a strong community
+                Experience God in a real way while being part of a strong community
               </Balancer>
             </h2>
             <button className='btn btn-info mb-3'>
