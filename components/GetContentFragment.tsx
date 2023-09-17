@@ -19,7 +19,11 @@ const getContentFragment = (
 
   if (obj) {
     if (obj.bold) {
-      modifiedText = <b key={index}> {text} </b>;
+      modifiedText = (
+        <b key={index}>
+          <Balancer>{text}</Balancer>
+        </b>
+      );
     }
     if (obj.italic) {
       modifiedText = <em key={index}> {text} </em>;
@@ -50,9 +54,7 @@ const getContentFragment = (
       return (
         <h4 key={index}>
           {modifiedText.map((item: string, i: React.Key) => (
-            <React.Fragment key={i}>
-              <Balancer>{item}</Balancer>
-            </React.Fragment>
+            <React.Fragment key={i}>{item}</React.Fragment>
           ))}
         </h4>
       );
