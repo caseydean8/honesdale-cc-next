@@ -19,9 +19,9 @@ export default function Home() {
         {/* div added for possible "jumbotron" styling edits for mobile */}
         <div>
           <div className='px-4'>
-            <Balancer>
-              <h1 className='pb-1'>You Belong Here</h1>
-            </Balancer>
+            <h1 className='pb-1'>
+              <Balancer>You Belong Here</Balancer>
+            </h1>
             <Image
               src={SevenHandsLogo}
               alt='seven hands around the cross'

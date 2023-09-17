@@ -1,4 +1,5 @@
 import React from 'react';
+import Balancer from 'react-wrap-balancer';
 // Format raw text from Hygraph query
 const getContentFragment = (
   index: React.Key,
@@ -49,7 +50,9 @@ const getContentFragment = (
       return (
         <h4 key={index}>
           {modifiedText.map((item: string, i: React.Key) => (
-            <React.Fragment key={i}> {item} </React.Fragment>
+            <React.Fragment key={i}>
+              <Balancer>{item}</Balancer>
+            </React.Fragment>
           ))}
         </h4>
       );
