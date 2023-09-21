@@ -20,7 +20,7 @@ export default function Home() {
         <div>
           <div className='px-4'>
             <h1 className='pb-1'>
-              <Balancer>You Belong Here</Balancer>
+              <Balancer>You Belong Here!</Balancer>
             </h1>
             <Image
               src={SevenHandsLogo}
@@ -53,7 +53,7 @@ export default function Home() {
         </h5>
         <div className='mt-4'>
           <h3>1113 Church Street</h3>
-          <h4 className='fw-400'>Honesdale, PA 18472</h4>
+          <h4 className='fw-400'>Honesdale, PA 18431</h4>
         </div>
         <div className='handicap mt-4'>
           <Image src='Wice_Wheelchair.svg' alt='wheelchair icon' width={40} height={40} />
