@@ -60,6 +60,10 @@ const OurBeliefs = () => {
               Christ. The purpose of the church is to glorify God by loving him and making him known
               to the lost world.'
         />
+        <Card
+          title='Other Things We Believe'
+          text='We believe in God’s created order, in making male and female, determined by divine imprint, genetically encoded at conception and changeless. We believe Christian marriage is defined as one man and one woman united by God in holy matrimony. We believe that our identity in Christ isn’t based on ethnicity, skin color or socio-economic status, but faith in the name of Jesus, and his free gift of righteousness'
+        />
       </div>
     </>
   );
