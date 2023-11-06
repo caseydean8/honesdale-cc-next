@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-// import Balancer from 'react-wrap-balancer';
 import Card from 'components/Card';
 import Video from 'components/Video';
 import Link from 'next/link';
