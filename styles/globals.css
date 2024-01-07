@@ -103,6 +103,13 @@ label,
   font-weight: 300;
 }
 
+.inc-weather {
+  color: red;
+  /* font-weight: 200; */
+  border-top: red solid 1px;
+  border-bottom: red solid 1px;
+}
+
 .form-floating > label {
   padding-left: 1.25rem;
 }

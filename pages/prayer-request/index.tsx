@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { getPrayerList } from '../../services';
 import getContentFragment from '@/components/GetContentFragment';
 import Link from 'next/link';
+import { GetStaticProps } from 'next';
 
 export default function PrayerRequest({ prayerList }) {
   return (
@@ -35,9 +36,16 @@ export default function PrayerRequest({ prayerList }) {
   );
 }
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
+//   const prayerList = (await getPrayerList()) || [];
+//   return {
+//     props: { prayerList },
+//   };
+// }
+
+export const getStaticProps = (async context => {
   const prayerList = (await getPrayerList()) || [];
   return {
     props: { prayerList },
   };
-}
+}) satisfies GetStaticProps;
