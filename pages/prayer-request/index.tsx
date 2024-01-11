@@ -36,16 +36,17 @@ export default function PrayerRequest({ prayerList }) {
   );
 }
 
-// export async function getStaticProps() {
-//   const prayerList = (await getPrayerList()) || [];
-//   return {
-//     props: { prayerList },
-//   };
-// }
-
-export const getStaticProps = (async context => {
+export async function getStaticProps() {
   const prayerList = (await getPrayerList()) || [];
   return {
     props: { prayerList },
   };
-}) satisfies GetStaticProps;
+}
+
+// need to figure out why this isn't auto updating
+// export const getStaticProps = (async context => {
+//   const prayerList = (await getPrayerList()) || [];
+//   return {
+//     props: { prayerList },
+//   };
+// }) satisfies GetStaticProps;
