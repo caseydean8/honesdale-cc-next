@@ -3,7 +3,8 @@ import Head from 'next/head';
 import { getPrayerList } from '../../services';
 import getContentFragment from '@/components/GetContentFragment';
 import Link from 'next/link';
-import { GetStaticProps } from 'next';
+// Reverting to .js from .tsx to test fetch from hygraph
+// import { GetStaticProps } from 'next';
 
 export default function PrayerRequest({ prayerList }) {
   return (
@@ -43,7 +44,6 @@ export async function getStaticProps() {
   };
 }
 
-// need to figure out why this isn't auto updating
 // export const getStaticProps = (async context => {
 //   const prayerList = (await getPrayerList()) || [];
 //   return {
