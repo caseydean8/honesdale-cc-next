@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { getPrayerList } from '../../services';
-import getContentFragment from '@/components/GetContentFragment';
+import getContentFragment from '../../components/GetContentFragment';
 import Link from 'next/link';
 // Reverting to .js from .tsx to test fetch from hygraph
 // import { GetStaticProps } from 'next';
