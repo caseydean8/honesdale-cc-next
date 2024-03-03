@@ -2,18 +2,22 @@ import React from 'react';
 import Balancer from 'react-wrap-balancer';
 // Format raw text from Hygraph query
 const getContentFragment = (
-  index: React.Key,
-  text: any,
-  obj: {
-    bold: string;
-    italic: string;
-    underline: string;
-    title: string;
-    height: string | number;
-    width: string | number;
-    src: string;
-  },
-  type?: string | undefined
+  index,
+  text,
+  obj,
+  type
+  // index: React.Key,
+  // text: any,
+  // obj: {
+  //   bold: string;
+  //   italic: string;
+  //   underline: string;
+  //   title: string;
+  //   height: string | number;
+  //   width: string | number;
+  //   src: string;
+  // },
+  // type?: string | undefined
 ) => {
   let modifiedText = text;
 
@@ -37,7 +41,8 @@ const getContentFragment = (
     case 'heading-three':
       return (
         <h3 key={index}>
-          {modifiedText.map((item: string, i: React.Key) => (
+          {/* {modifiedText.map((item: string, i: React.Key) => ( */}
+          {modifiedText.map((item, i) => (
             <React.Fragment key={i}> {item} </React.Fragment>
           ))}
         </h3>
@@ -45,7 +50,8 @@ const getContentFragment = (
     case 'paragraph':
       return (
         <p key={index}>
-          {modifiedText.map((item: string, i: React.Key) => (
+          {/* {modifiedText.map((item: string, i: React.Key) => ( */}
+          {modifiedText.map((item, i) => (
             <React.Fragment key={i}> {item} </React.Fragment>
           ))}
         </p>
@@ -53,7 +59,8 @@ const getContentFragment = (
     case 'heading-four':
       return (
         <h4 key={index}>
-          {modifiedText.map((item: string, i: React.Key) => (
+          {/* {modifiedText.map((item: string, i: React.Key) => ( */}
+          {modifiedText.map((item, i) => (
             <React.Fragment key={i}>{item}</React.Fragment>
           ))}
         </h4>
