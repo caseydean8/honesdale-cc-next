@@ -41,6 +41,7 @@ export async function getStaticProps() {
   const prayerList = (await getPrayerList()) || [];
   return {
     props: { prayerList },
+    revalidate: 20,
   };
 }
 
