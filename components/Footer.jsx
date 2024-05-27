@@ -86,11 +86,11 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className='copyright text-center'>
+            {/* <div className='copyright text-center'>
               <p>
                 <small>Copyright 2024. All Rights Reserved.</small>
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

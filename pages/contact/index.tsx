@@ -158,7 +158,7 @@ const SignupForm = () => {
                   )}
                 </div>
               </Form>
-              <h4 className='mt-5'>. . . or feel free to call us</h4>
+              <h4 className='mt-5'>or feel free to call us</h4>
               <button className='btn btn-info btn-lg mt-2'>
                 <a href='tel:5702533267' className='black-link'>
                   570 253-3267
