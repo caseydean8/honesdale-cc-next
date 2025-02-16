@@ -66,7 +66,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link href='/videos' className='footer-links'>
-                    videos
+                    messages
                   </Link>
                 </li>
                 <li>

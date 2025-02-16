@@ -16,7 +16,7 @@ const Header = () => {
   const menu = [
     { title: 'home', path: '/' },
     { title: 'our beliefs', path: '/our-beliefs' },
-    { title: 'videos', path: '/videos' },
+    { title: 'messages', path: '/videos' },
     { title: 'events', path: '/events' },
     { title: 'prayer requests', path: '/prayer-request' },
     { title: 'contact', path: '/contact' },

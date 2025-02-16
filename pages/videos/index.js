@@ -16,7 +16,7 @@ const Videos = () => {
   return (
     <>
       <Head>
-        <title>Videos</title>
+        <title>Messages</title>
         <meta
           name='description'
           content='Watch videos of our most recent services as well as other content.'
