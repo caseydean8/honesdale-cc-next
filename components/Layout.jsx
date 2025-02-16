@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { Header, Footer } from './';
-// import { IncWeather } from './';
+import { IncWeather } from './';
 
 const Layout = ({ children }) => {
   return (
@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
       <Header />
       <div className='container-sm navbar-clearance'>
         {/* Inclement weather cancellation warning */}
-        {/* <IncWeather /> */}
+        <IncWeather />
         {children}
       </div>
       <Footer />
