@@ -164,6 +164,10 @@ const SignupForm = () => {
                   570 253-3267
                 </a>
               </button>
+              <p className='mt-3'>
+                No mobile information will be shared with third parties/affiliates for
+                marketing/promotional purposes.
+              </p>
             </>
           )}
         </Formik>
