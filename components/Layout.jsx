@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
       <Header />
       <div className='container-sm navbar-clearance'>
         {/* Inclement weather cancellation warning */}
-        {<IncWeather />}
+        {/* {<IncWeather />} */}
         {children}
       </div>
       <Footer />
