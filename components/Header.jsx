@@ -18,7 +18,7 @@ const Header = () => {
     { title: 'our beliefs', path: '/our-beliefs' },
     { title: 'messages', path: '/videos' },
     { title: 'events', path: '/events' },
-    { title: 'prayer requests', path: '/prayer-request' },
+    { title: 'prayer requests', path: '/prayer-request-form' },
     { title: 'contact', path: '/contact' },
     { title: 'plan your visit', path: '/plan-your-visit' },
   ];

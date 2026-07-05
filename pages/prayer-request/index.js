@@ -21,12 +21,14 @@ export default function PrayerRequest({ prayerList }) {
             </Link>
           </button>
         </div>
+        <p>Text or call 209-209-8301 to add someone to the prayer list</p>
         <div className='card mb-2 p-3'>
           {/* card-body is interfering with carriage return for some reason */}
           {/* <div className='card-body'> */}
+
           {prayerList.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemIndex) =>
-              getContentFragment(itemIndex, item.text, item)
+              getContentFragment(itemIndex, item.text, item),
             );
             return getContentFragment(index, children, typeObj, typeObj.type);
           })}

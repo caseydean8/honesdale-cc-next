@@ -75,7 +75,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href='/prayer-request' className='footer-links'>
+                  <Link href='/prayer-request-form' className='footer-links'>
                     prayer requests
                   </Link>
                 </li>

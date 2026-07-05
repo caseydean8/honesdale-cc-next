@@ -46,7 +46,7 @@ const PrayerRequestForm = () => {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_PRAYREQ_ID,
         templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
       )
       .then(
         result => {
@@ -54,7 +54,7 @@ const PrayerRequestForm = () => {
           setSubmitted(true);
           setLoading(false);
         },
-        error => console.log(error)
+        error => console.log(error),
       );
   }
 
@@ -110,6 +110,9 @@ const PrayerRequestForm = () => {
                   )}
                 </div>
               </Form>
+              <p className='pt-5'>
+                You can also text or call 209-209-8301 to add someone to the prayer list
+              </p>
               <p className='pt-5'>
                 <Balancer>
                   Rejoice always, pray without ceasing, give thanks in all circumstances; for this
